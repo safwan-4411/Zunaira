@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zunaira ✨</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400;1,600&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --rose:  #c9647f;
+      --blush: #f2c4ce;
+      --cream: #fdf6f0;
+      --plum:  #6b3050;
+      --gold:  #d4a653;
+      --mist:  #e8dde5;
+    }
+
+    body {
+      background: var(--cream);
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* petals */
+    .petals { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .petal {
+      position: absolute; top: -40px;
+      width: 14px; height: 20px;
+      background: radial-gradient(ellipse at 40% 30%, #f7b8c4, #d6748a);
+      border-radius: 60% 40% 60% 40% / 50% 60% 40% 50%;
+      opacity: 0;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0%   { opacity: 0; transform: translateY(0) rotate(0deg); }
+      10%  { opacity: .7; }
+      90%  { opacity: .5; }
+      100% { opacity: 0; transform: translateY(110vh) rotate(360deg); }
+    }
+
+    /* hero */
+    .hero {
+      position: relative; z-index: 1;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      min-height: 100vh;
+      padding: 60px 24px 40px;
+      text-align: center;
+    }
+
+    .name-badge {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(3rem, 10vw, 7rem);
+      color: var(--plum);
+      line-height: 1;
+      letter-spacing: .02em;
+      display: inline-block;
+    }
+    .name-badge::after {
+      content: '';
+      display: block;
+      margin: 12px auto 0;
+      width: 60%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      font-weight: 300;
+      font-size: 0.85rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--rose);
+    }
+
+    /* card */
+    .card {
+      margin-top: 56px;
+      background: white;
+      border: 1px solid var(--mist);
+      border-radius: 20px;
+      padding: 52px 44px;
+      max-width: 580px;
+      width: 100%;
+      box-shadow: 0 8px 40px rgba(107,48,80,.08);
+      position: relative;
+    }
+    .card::before {
+      content: '"';
+      font-family: 'Playfair Display', serif;
+      font-size: 120px;
+      color: var(--blush);
+      position: absolute;
+      top: -24px; left: 20px;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .shayri {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+      line-height: 2;
+      color: var(--plum);
+      text-align: center;
+    }
+
+    .sher {
+      display: block;
+      margin-bottom: 28px;
+    }
+    .sher:last-child { margin-bottom: 0; }
+
+    .misra { display: block; }
+
+    .rose-sep {
+      display: block;
+      font-style: normal;
+      font-size: 1.1rem;
+      color: var(--rose);
+      margin: 4px 0 24px;
+      letter-spacing: 6px;
+    }
+
+    .divider {
+      margin: 36px auto;
+      width: 80px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--rose), transparent);
+    }
+
+    .from {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--rose);
+      display: block;
+      text-align: center;
+    }
+
+    .flowers { margin-top: 40px; font-size: 1.8rem; letter-spacing: 8px; }
+
+    footer {
+      position: relative; z-index: 1;
+      text-align: center; padding: 20px;
+      font-size: 0.75rem; color: #bba;
+    }
+
+    @media (max-width: 480px) {
+      .card { padding: 36px 24px; }
+      .card::before { font-size: 80px; top: -16px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="petals" id="petals"></div>
+
+<section class="hero">
+  <h1 class="name-badge">Zunaira</h1>
+  <p class="subtitle">A little something, just for you</p>
+
+  <div class="card">
+    <div class="shayri">
+
+      <span class="sher">
+        <span class="misra">In a world of ordinary days,</span>
+        <span class="misra">you arrive like the softest haze —</span>
+        <span class="misra">warm as sunlight, gentle as rain,</span>
+        <span class="misra">a friend who turns joy from simple to divine.</span>
+      </span>
+
+      <span class="rose-sep">❀</span>
+
+      <span class="sher">
+        <span class="misra">Your laughter is the kind of song</span>
+        <span class="misra">that lingers long after you're gone,</span>
+        <span class="misra">your kindness, a quiet, golden art —</span>
+        <span class="misra">Zunaira, you live in the heart.</span>
+      </span>
+
+      <span class="rose-sep">❀</span>
+
+      <span class="sher">
+        <span class="misra">May every road you walk be bright,</span>
+        <span class="misra">may every dream take flight,</span>
+        <span class="misra">for a soul this beautiful and true</span>
+        <span class="misra">deserves a world as lovely as you.</span>
+      </span>
+
+    </div>
+
+    <div class="divider"></div>
+    <span class="from">— with love, from your friend ✨</span>
+  </div>
+
+  <div class="flowers">🌸 🌺 🌸</div>
+</section>
+
+<footer>made with ❤️ for Zunaira</footer>
+
+<script>
+  const container = document.getElementById('petals');
+  for (let i = 0; i < 22; i++) {
+    const p = document.createElement('div');
+    p.className = 'petal';
+    const size = 10 + Math.random() * 12;
+    p.style.cssText = `
+      left: ${Math.random() * 100}%;
+      width: ${size}px;
+      height: ${size * 1.4}px;
+      animation-duration: ${6 + Math.random() * 8}s;
+      animation-delay: ${Math.random() * 10}s;
+      transform: rotate(${Math.random() * 360}deg);
+      opacity: 0;
+    `;
+    container.appendChild(p);
+  }
+</script>
+</body>
+</html>
